@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 using SOSEnterpriseUnion.Models;
-using SOSEnterpriseUnion.Views;
+using SOSEnterpriseUnion.Pages;
 
-namespace SOSEnterpriseUnion.ViewModels
+namespace SOSEnterpriseUnion.PageModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ItemsPageModel : BasePageModel
     {
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public ItemsPageModel() : base()
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();

@@ -3,11 +3,11 @@ using System.Windows.Input;
 
 using Xamarin.Forms;
 
-namespace SOSEnterpriseUnion.ViewModels
+namespace SOSEnterpriseUnion.PageModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutPageModel : BasePageModel
     {
-        public AboutViewModel()
+        public AboutPageModel() : base()
         {
             Title = "About";
 

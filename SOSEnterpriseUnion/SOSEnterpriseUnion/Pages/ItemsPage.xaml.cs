@@ -9,23 +9,23 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using SOSEnterpriseUnion.Models;
-using SOSEnterpriseUnion.Views;
-using SOSEnterpriseUnion.ViewModels;
+using SOSEnterpriseUnion.Pages;
+using SOSEnterpriseUnion.PageModels;
 
-namespace SOSEnterpriseUnion.Views
+namespace SOSEnterpriseUnion.Pages
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        ItemsPageModel PageModel;
 
         public ItemsPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = PageModel = new ItemsPageModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -34,7 +34,7 @@ namespace SOSEnterpriseUnion.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailPageModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
@@ -49,8 +49,8 @@ namespace SOSEnterpriseUnion.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            if (PageModel.Items.Count == 0)
+                PageModel.LoadItemsCommand.Execute(null);
         }
     }
 }

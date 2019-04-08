@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SOSEnterpriseUnion.Services;
-using SOSEnterpriseUnion.Views;
+using SOSEnterpriseUnion.Pages;
 
 namespace SOSEnterpriseUnion
 {
@@ -14,7 +14,8 @@ namespace SOSEnterpriseUnion
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:SOSEnterpriseUnion.PageModels"
+             x:Class="SOSEnterpriseUnion.Pages.LoginPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Blue">
+            <Label Text="SOS Enterprise Union doo"
+                   TextColor="White"
+                   FontSize="30"
+                   LineBreakMode="WordWrap"
+                   Margin="30"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <Frame BackgroundColor="Blue">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text = "Upišite lozinku:"
+                               TextColor="White"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                        <Entry x:Name="passwordEntry"
+                               BackgroundColor="White"
+                               IsPassword="True"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <Button x:Name="loginButton"
+                                Clicked="LoginButton_Clicked"
+                                Text = "Prijavite se"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

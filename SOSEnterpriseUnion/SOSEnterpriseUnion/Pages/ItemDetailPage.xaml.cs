@@ -5,22 +5,22 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using SOSEnterpriseUnion.Models;
-using SOSEnterpriseUnion.ViewModels;
+using SOSEnterpriseUnion.PageModels;
 
-namespace SOSEnterpriseUnion.Views
+namespace SOSEnterpriseUnion.Pages
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        ItemDetailPageModel PageModel;
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(ItemDetailPageModel PageModel)
         {
             InitializeComponent();
 
-            BindingContext = this.viewModel = viewModel;
+            BindingContext = this.PageModel = PageModel;
         }
 
         public ItemDetailPage()
@@ -33,8 +33,8 @@ namespace SOSEnterpriseUnion.Views
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
-            BindingContext = viewModel;
+            PageModel = new ItemDetailPageModel(item);
+            BindingContext = PageModel;
         }
     }
 }

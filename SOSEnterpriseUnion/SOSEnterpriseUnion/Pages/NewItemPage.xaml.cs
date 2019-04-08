@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 
 using SOSEnterpriseUnion.Models;
 
-namespace SOSEnterpriseUnion.Views
+namespace SOSEnterpriseUnion.Pages
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer

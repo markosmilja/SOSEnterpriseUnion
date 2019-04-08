@@ -2,12 +2,12 @@
 
 using SOSEnterpriseUnion.Models;
 
-namespace SOSEnterpriseUnion.ViewModels
+namespace SOSEnterpriseUnion.PageModels
 {
-    public class ItemDetailViewModel : BaseViewModel
+    public class ItemDetailPageModel : BasePageModel
     {
         public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public ItemDetailPageModel(Item item = null) : base()
         {
             Title = item?.Text;
             Item = item;
