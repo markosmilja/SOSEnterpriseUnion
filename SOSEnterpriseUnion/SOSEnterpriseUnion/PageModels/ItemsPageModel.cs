@@ -17,7 +17,7 @@ namespace SOSEnterpriseUnion.PageModels
 
         public ItemsPageModel() : base()
         {
-            Title = "Browse";
+            Title = "Gradilišta";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

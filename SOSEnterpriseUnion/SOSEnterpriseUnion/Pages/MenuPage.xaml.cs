@@ -21,8 +21,8 @@ namespace SOSEnterpriseUnion.Pages
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.Gradilista, Title="Gradilišta" },
+                new HomeMenuItem {Id = MenuItemType.Kontakt, Title="Kontakt" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
@@ -37,5 +37,18 @@ namespace SOSEnterpriseUnion.Pages
                 await RootPage.NavigateFromMenu(id);
             };
         }
+    }
+
+    public enum MenuItemType
+    {
+        Gradilista,
+        Kontakt
+    }
+
+    public class HomeMenuItem
+    {
+        public MenuItemType Id { get; set; }
+
+        public string Title { get; set; }
     }
 }

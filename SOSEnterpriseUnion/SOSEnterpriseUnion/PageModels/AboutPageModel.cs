@@ -9,7 +9,7 @@ namespace SOSEnterpriseUnion.PageModels
     {
         public AboutPageModel() : base()
         {
-            Title = "About";
+            Title = "Kontakt";
 
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
         }

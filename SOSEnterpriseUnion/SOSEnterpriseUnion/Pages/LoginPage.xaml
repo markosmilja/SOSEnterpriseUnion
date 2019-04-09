@@ -4,7 +4,7 @@
              xmlns:vm="clr-namespace:SOSEnterpriseUnion.PageModels"
              x:Class="SOSEnterpriseUnion.Pages.LoginPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Blue">
+        <StackLayout BackgroundColor="{StaticResource NavigationPrimary}">
             <Label Text="SOS Enterprise Union doo"
                    TextColor="White"
                    FontSize="30"
@@ -13,7 +13,7 @@
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"/>
 
-            <Frame BackgroundColor="Blue">
+            <Frame BackgroundColor="{StaticResource NavigationPrimary}">
                 <StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text = "Upišite lozinku:"
@@ -27,8 +27,9 @@
                                VerticalOptions="Center"/>
                     </StackLayout>
                     <Button x:Name="loginButton"
-                                Clicked="LoginButton_Clicked"
-                                Text = "Prijavite se"/>
+                            Clicked="LoginButton_Clicked"
+                            Text = "Prijavite se"
+                            CornerRadius="0"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

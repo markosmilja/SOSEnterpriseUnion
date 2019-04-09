@@ -20,7 +20,7 @@ namespace SOSEnterpriseUnion.Pages
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Gradilista, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -29,10 +29,10 @@ namespace SOSEnterpriseUnion.Pages
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
+                    case (int)MenuItemType.Gradilista:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
-                    case (int)MenuItemType.About:
+                    case (int)MenuItemType.Kontakt:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
                 }
@@ -46,9 +46,9 @@ namespace SOSEnterpriseUnion.Pages
 
                 if (Device.RuntimePlatform == Device.Android)
                     await Task.Delay(100);
-
-                IsPresented = false;
             }
+
+            IsPresented = false;
         }
     }
 }
