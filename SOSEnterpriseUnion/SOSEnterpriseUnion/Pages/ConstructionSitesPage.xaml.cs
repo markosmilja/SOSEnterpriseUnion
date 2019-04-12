@@ -17,16 +17,16 @@ namespace SOSEnterpriseUnion.Pages
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
-    public partial class ItemsPage : ContentPage
+    public partial class ConstructionSitesPage : ContentPage
     {
-        ItemsPageModel PageModel;
+        ConstructionSitesPageModel PageModel;
         private bool loggingIn = false;
 
-        public ItemsPage()
+        public ConstructionSitesPage()
         {
             InitializeComponent();
 
-            BindingContext = PageModel = new ItemsPageModel();
+            BindingContext = PageModel = new ConstructionSitesPageModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -35,7 +35,7 @@ namespace SOSEnterpriseUnion.Pages
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailPageModel(item)));
+            await Navigation.PushAsync(new ConstructionSitePage(new ConstructionSitePageModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

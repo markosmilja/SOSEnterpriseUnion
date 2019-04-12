@@ -30,7 +30,7 @@ namespace SOSEnterpriseUnion.Pages
                 switch (id)
                 {
                     case (int)MenuItemType.Gradilista:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                        MenuPages.Add(id, new NavigationPage(new ConstructionSitesPage()));
                         break;
                     case (int)MenuItemType.Kontakt:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));

@@ -10,12 +10,12 @@ using SOSEnterpriseUnion.Pages;
 
 namespace SOSEnterpriseUnion.PageModels
 {
-    public class ItemsPageModel : BasePageModel
+    public class ConstructionSitesPageModel : BasePageModel
     {
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsPageModel() : base()
+        public ConstructionSitesPageModel() : base()
         {
             Title = "Gradilišta";
             Items = new ObservableCollection<Item>();
@@ -44,6 +44,8 @@ namespace SOSEnterpriseUnion.PageModels
                 {
                     Items.Add(item);
                 }
+
+                App.DataStore.GetItemAsync("0");
             }
             catch (Exception ex)
             {

@@ -12,18 +12,18 @@ namespace SOSEnterpriseUnion.Pages
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
-    public partial class ItemDetailPage : ContentPage
+    public partial class ConstructionSitePage : ContentPage
     {
-        ItemDetailPageModel PageModel;
+        ConstructionSitePageModel PageModel;
 
-        public ItemDetailPage(ItemDetailPageModel PageModel)
+        public ConstructionSitePage(ConstructionSitePageModel PageModel)
         {
             InitializeComponent();
 
             BindingContext = this.PageModel = PageModel;
         }
 
-        public ItemDetailPage()
+        public ConstructionSitePage()
         {
             InitializeComponent();
 
@@ -33,7 +33,7 @@ namespace SOSEnterpriseUnion.Pages
                 Description = "This is an item description."
             };
 
-            PageModel = new ItemDetailPageModel(item);
+            PageModel = new ConstructionSitePageModel(item);
             BindingContext = PageModel;
         }
     }

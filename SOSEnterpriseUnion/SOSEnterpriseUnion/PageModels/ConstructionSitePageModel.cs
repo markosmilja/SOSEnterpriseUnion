@@ -4,10 +4,10 @@ using SOSEnterpriseUnion.Models;
 
 namespace SOSEnterpriseUnion.PageModels
 {
-    public class ItemDetailPageModel : BasePageModel
+    public class ConstructionSitePageModel : BasePageModel
     {
         public Item Item { get; set; }
-        public ItemDetailPageModel(Item item = null) : base()
+        public ConstructionSitePageModel(Item item = null) : base()
         {
             Title = item?.Text;
             Item = item;

@@ -3,12 +3,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SOSEnterpriseUnion.Services;
 using SOSEnterpriseUnion.Pages;
+using SOSEnterpriseUnion.Models;
 
 namespace SOSEnterpriseUnion
 {
     public partial class App : Application
     {
-
+        public static IDataStore<Gradiliste> DataStore;
         public App()
         {
             InitializeComponent();

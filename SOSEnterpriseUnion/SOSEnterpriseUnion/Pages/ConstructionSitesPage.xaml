@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SOSEnterpriseUnion.Pages.ItemsPage"
+             x:Class="SOSEnterpriseUnion.Pages.ConstructionSitesPage"
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
 
@@ -29,7 +29,7 @@
                                 FontSize="16" />
                             <Label Text="{Binding Description}" 
                                 LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                Style="{DynamicResource ListConstructionSiteTextStyle}"
                                 FontSize="13" />
                         </StackLayout>
                     </ViewCell>
