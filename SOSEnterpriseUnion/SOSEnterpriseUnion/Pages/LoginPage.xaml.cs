@@ -26,8 +26,7 @@ namespace SOSEnterpriseUnion.Pages
         {
             if (LoginPageModel.IsPasswordValid(passwordEntry.Text))
             {
-                var mainPage = new MainPage();
-                await Navigation.PushModalAsync(mainPage);
+                await Navigation.PopModalAsync();
             }
             else
             {

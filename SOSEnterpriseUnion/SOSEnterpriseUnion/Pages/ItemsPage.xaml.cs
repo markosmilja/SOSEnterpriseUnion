@@ -20,6 +20,7 @@ namespace SOSEnterpriseUnion.Pages
     public partial class ItemsPage : ContentPage
     {
         ItemsPageModel PageModel;
+        private bool loggingIn = false;
 
         public ItemsPage()
         {
@@ -45,9 +46,19 @@ namespace SOSEnterpriseUnion.Pages
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
+
+            if (!loggingIn)
+            {
+                loggingIn = true;
+                if (!BasePageModel.IsLoggedIn)
+                {
+                    await Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
+                    BasePageModel.IsLoggedIn = true;
+                }
+            }
 
             if (PageModel.Items.Count == 0)
                 PageModel.LoadItemsCommand.Execute(null);
