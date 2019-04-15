@@ -45,7 +45,7 @@ namespace SOSEnterpriseUnion.PageModels
                     Items.Add(item);
                 }
 
-                App.DataStore.GetItemAsync("0");
+                //App.DataStore.GetItemAsync("0");
             }
             catch (Exception ex)
             {

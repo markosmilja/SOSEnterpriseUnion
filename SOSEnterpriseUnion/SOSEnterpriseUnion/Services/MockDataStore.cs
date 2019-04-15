@@ -15,12 +15,12 @@ namespace SOSEnterpriseUnion.Services
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Gradiliste 1", Description="Opis gradilista." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Gradiliste 2", Description="Opis gradilista." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Gradiliste 3", Description="Opis gradilista." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Gradiliste 4", Description="Opis gradilista." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Gradiliste 5", Description="Opis gradilista." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Gradiliste 6", Description="Opis gradilista." }
             };
 
             foreach (var item in mockItems)
